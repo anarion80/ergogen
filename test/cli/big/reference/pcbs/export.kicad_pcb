@@ -1,16 +1,16 @@
 
-            
-(kicad_pcb (version 20211014) (generator pcbnew)
+
+(kicad_pcb (version 20171130) (generator pcbnew)
+
+  (page "A3")
+  (title_block
+    (title "export")
+    (rev "v3.14")
+    (company "MrZealot")
+  )
 
   (general
     (thickness 1.6)
-  )
-
-  (paper "A3")
-  (title_block
-    (title "export")
-    (rev "v1.0.0")
-    (company "Unknown")
   )
 
   (layers
@@ -99,7 +99,7 @@
   )
 
             (net 0 "")
-            
+
   (net_class Default "This is the default net class."
     (clearance 0.2)
     (trace_width 0.25)
@@ -110,7 +110,7 @@
     (add_net "")
   )
 
-            
+
   (net_class Power "This is the power net class."
     (clearance 0.2)
     (trace_width 0.5)
@@ -118,12 +118,10 @@
     (via_drill 0.4)
     (uvia_dia 0.3)
     (uvia_drill 0.1)
-    
+
   )
 
-            
-            
-            
-)
 
-        
+
+
+)

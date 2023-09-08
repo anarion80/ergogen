@@ -1,4 +1,6 @@
 const m = require('makerjs')
+const yaml = require('js-yaml')
+
 const u = require('./utils')
 const a = require('./assert')
 const prep = require('./prepare')
@@ -133,7 +135,7 @@ const kicad_power_netclass = `
   )
 `
 
-const makerjs2kicad = exports._makerjs2kicad = (model, layer='Edge.Cuts') => {
+const makerjs2kicad = exports._makerjs2kicad = (model, layer) => {
     const grs = []
     const xy = val => `${val[0]} ${-val[1]}`
     m.model.walk(model, {
@@ -209,32 +211,43 @@ const footprint = exports._footprint = (points, net_indexer, component_indexer, 
         } else if (def_type == 'boolean') {
             parsed_def = {type: 'boolean', value: param_def}
         } else if (def_type == 'array') {
-            parsed_def = {type: 'array', value: param_def}
-        } else if (def_type == 'undefined') {
-            parsed_def = {type: 'net', value: undefined}
+            parsed_def = { type: 'array', value: param_def }
+        } else if (def_type == 'object') {
+            // parsed param definitions also expand to an object
+            // so to detect whether this is an arbitrary object,
+            // we first have to make sure it's not an expanded param def
+            // (this has to be a heuristic, but should be pretty reliable)
+            const defarr = Object.keys(param_def)
+            const already_expanded = defarr.length == 2 && defarr.includes('type') && defarr.includes('value')
+            if (!already_expanded) {
+                parsed_def = { type: 'object', value: param_def }
+            }
+        } else {
+            parsed_def = { type: 'net', value: undefined }
         }
 
         // combine default value with potential user override
-        let value = prep.extend(parsed_def.value, params[param_name])
-        let type = parsed_def.type
-
+        let value = params[param_name] !== undefined ? params[param_name] : parsed_def.value
+        const type = parsed_def.type
 
         // templating support, with conversion back to raw datatypes
         const converters = {
             string: v => v,
             number: v => a.sane(v, `${name}.params.${param_name}`, 'number')(units),
             boolean: v => v === 'true',
+            array: v => yaml.load(v),
+            object: v => yaml.load(v),
             net: v => v,
-            anchor: v => v,
-            array: v => v
+            anchor: v => yaml.load(v)
         }
+        a.in(type, `${name}.params.${param_name}.type`, Object.keys(converters))
         if (a.type(value)() == 'string') {
             value = u.template(value, point.meta)
             value = converters[type](value)
         }
 
-        // type-specific processing
-        if (['string', 'number', 'boolean', 'array'].includes(type)) {
+        // type-specific postprocessing
+        if (['string', 'number', 'boolean', 'array', 'object'].includes(type)) {
             parsed_params[param_name] = value
         } else if (type == 'net') {
             const net = a.sane(value, `${name}.params.${param_name}`, 'string')(units)
@@ -244,8 +257,8 @@ const footprint = exports._footprint = (points, net_indexer, component_indexer, 
                 index: index,
                 str: `(net ${index} "${net}")`
             }
-        } else if (type == 'anchor') {
-            let parsed_anchor = anchor(value || {}, `${name}.params.${param_name}`, points, point)(units)
+        } else { // anchor
+            let parsed_anchor = anchor(value, `${name}.params.${param_name}`, points, point)(units)
             parsed_anchor.y = -parsed_anchor.y // kicad mirror, as per usual
             parsed_params[param_name] = parsed_anchor
         }
@@ -263,7 +276,7 @@ const footprint = exports._footprint = (points, net_indexer, component_indexer, 
         const sign = point.meta.mirrored ? -1 : 1
         return `${sign * x} ${y}`
     }
-    const xyfunc = (x, y, resist=true) => {
+    const xyfunc = (x, y, resist) => {
         const new_anchor = anchor({
             shift: [x, -y],
             resist: resist
@@ -389,4 +402,3 @@ exports.parse = (config, points, outlines, units) => {
 
     return results
 }
-

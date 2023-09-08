@@ -3,6 +3,7 @@ exports.inject = (ergogen) => {
         params: {
             designator: 'T',
             side: 'F',
+            width: 0.25,
             P1: {type: 'net', value: 'P1'}
         },
         body: p => {
@@ -20,7 +21,7 @@ exports.inject = (ergogen) => {
 
                 )
 
-                (segment (start ${p.sxy(0, 0)}) (end ${p.sxy(5, 5)}) (width 0.25) (layer ${p.side}.Cu) (net ${p.P1.index}))
+                (segment (start ${p.sxy(0, 0)}) (end ${p.sxy(5, 5)}) (width ${p.width}) (layer ${p.side}.Cu) (net ${p.P1.index}))
 
             `
         }
@@ -106,7 +107,33 @@ exports.inject = (ergogen) => {
         }
     })
 
-    ergogen.inject('footprint', 'references_test', {
+    ergogen.inject('footprint', 'arrobj_test', {
+        params: {
+            designator: 'T',
+            side: 'F',
+            start: {x: 0, y: 0},
+            end: [[1, 0], [0, 1]]
+        },
+        body: p => {
+            lines = ''
+            for (const item of p.end) {
+                lines += `(fp_line (start ${p.start.x} ${p.start.y}) (end ${item[0]} ${item[1]}) (layer Dwgs.User) (width 0.05))\n`
+            }
+            return ` 
+
+                (module arrobj_test (layer ${p.side}.Cu) (tedit 5CF31DEF)
+
+                    ${p.at /* parametric position */}
+
+                    ${lines}
+
+                )
+
+            `
+        }
+    })
+
+    ergogen.inject('references_test', {
         params: {},
         body: p => {
             return `references ${p.ref_hide ? 'hidden' : 'shown'}`
