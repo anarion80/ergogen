@@ -10,15 +10,15 @@ const filter = require('./filter').parse
 const kicad_prefix = `
 (kicad_pcb (version 20211014) (generator pcbnew)
 
-  (general
-    (thickness 1.6)
-  )
-
   (paper "A3")
   (title_block
     (title "KEYBOARD_NAME_HERE")
     (rev "VERSION_HERE")
     (company "YOUR_NAME_HERE")
+  )
+
+  (general
+    (thickness 1.6)
   )
 
   (layers
@@ -72,15 +72,13 @@ const kicad_prefix = `
     (aux_axis_origin 0 0)
     (visible_elements FFFFFF7F)
     (pcbplotparams
-      (layerselection 0x00010fc_ffffffff)
-      (disableapertmacros false)
+      (layerselection 0x010fc_ffffffff)
       (usegerberextensions false)
       (usegerberattributes true)
       (usegerberadvancedattributes true)
       (creategerberjobfile true)
-      (svguseinch false)
-      (svgprecision 6)
       (excludeedgelayer true)
+      (linewidth 0.100000)
       (plotframeref false)
       (viasonmask false)
       (mode 1)
@@ -88,22 +86,18 @@ const kicad_prefix = `
       (hpglpennumber 1)
       (hpglpenspeed 20)
       (hpglpendiameter 15.000000)
-      (dxfpolygonmode true)
-      (dxfimperialunits true)
-      (dxfusepcbnewfont true)
       (psnegative false)
       (psa4output false)
       (plotreference true)
       (plotvalue true)
       (plotinvisibletext false)
-      (sketchpadsonfab false)
+      (padsonsilk false)
       (subtractmaskfromsilk false)
       (outputformat 1)
       (mirror false)
       (drillshape 1)
       (scaleselection 1)
-      (outputdirectory "")
-    )
+      (outputdirectory ""))
   )
 `
 

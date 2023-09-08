@@ -1,16 +1,16 @@
 
-
+            
 (kicad_pcb (version 20211014) (generator pcbnew)
-
-  (general
-    (thickness 1.6)
-  )
 
   (paper "A3")
   (title_block
     (title "main")
     (rev "v1.0.0")
     (company "Unknown")
+  )
+
+  (general
+    (thickness 1.6)
   )
 
   (layers
@@ -64,15 +64,13 @@
     (aux_axis_origin 0 0)
     (visible_elements FFFFFF7F)
     (pcbplotparams
-      (layerselection 0x00010fc_ffffffff)
-      (disableapertmacros false)
+      (layerselection 0x010fc_ffffffff)
       (usegerberextensions false)
       (usegerberattributes true)
       (usegerberadvancedattributes true)
       (creategerberjobfile true)
-      (svguseinch false)
-      (svgprecision 6)
       (excludeedgelayer true)
+      (linewidth 0.100000)
       (plotframeref false)
       (viasonmask false)
       (mode 1)
@@ -80,22 +78,18 @@
       (hpglpennumber 1)
       (hpglpenspeed 20)
       (hpglpendiameter 15.000000)
-      (dxfpolygonmode true)
-      (dxfimperialunits true)
-      (dxfusepcbnewfont true)
       (psnegative false)
       (psa4output false)
       (plotreference true)
       (plotvalue true)
       (plotinvisibletext false)
-      (sketchpadsonfab false)
+      (padsonsilk false)
       (subtractmaskfromsilk false)
       (outputformat 1)
       (mirror false)
       (drillshape 1)
       (scaleselection 1)
-      (outputdirectory "")
-    )
+      (outputdirectory ""))
   )
 
             (net 0 "")
@@ -103,7 +97,7 @@
 (net 2 "T4_1")
 (net 3 "T4_2")
 (net 4 "T4_3")
-
+            
   (net_class Default "This is the default net class."
     (clearance 0.2)
     (trace_width 0.25)
@@ -118,7 +112,7 @@
 (add_net "T4_3")
   )
 
-
+            
   (net_class Power "This is the power net class."
     (clearance 0.2)
     (trace_width 0.5)
@@ -126,21 +120,10 @@
     (via_drill 0.4)
     (uvia_dia 0.3)
     (uvia_drill 0.1)
-
+    
   )
 
-
-  (net_class Power "This is the power net class."
-    (clearance 0.2)
-    (trace_width 0.5)
-    (via_dia 0.8)
-    (via_drill 0.4)
-    (uvia_dia 0.3)
-    (uvia_drill 0.1)
-
-  )
-
-
+            
 
                 (module trace_test (layer F.Cu) (tedit 5CF31DEF)
 
@@ -156,7 +139,7 @@
 
                 (segment (start 1 -1) (end 7.830127 0.8301270000000001) (width 0.475) (layer F.Cu) (net 1))
 
-
+            
 
 
                 (module trace_test (layer B.Cu) (tedit 5CF31DEF)
@@ -173,7 +156,7 @@
 
                 (segment (start 19 -1) (end 12.169872999999999 0.8301270000000001) (width 0.475) (layer B.Cu) (net 1))
 
-
+            
 
 
                 (module zone_test (layer F.Cu) (tedit 5CF31DEF)
@@ -195,8 +178,8 @@
                     (polygon (pts (xy 7.830127 0.8301270000000001) (xy 2.830127 -7.830127) (xy -5.830127 -2.830127) (xy -0.8301270000000001 5.830127)))
                 )
 
-
-
+            
+ 
 
                 (module dynamic_net_test (layer F.Cu) (tedit 5CF31DEF)
 
@@ -213,8 +196,8 @@
 
                 )
 
-
-
+            
+ 
 
                 (module anchor_test (layer F.Cu) (tedit 5CF31DEF)
 
@@ -224,8 +207,8 @@
 
                 )
 
-
-
+            
+ 
 
                 (module anchor_test (layer F.Cu) (tedit 5CF31DEF)
 
@@ -235,8 +218,8 @@
 
                 )
 
-
-
+            
+ 
 
                 (module arrobj_test (layer F.Cu) (tedit 5CF31DEF)
 
@@ -248,45 +231,8 @@
 
                 )
 
-
-
-
-                (module arrobj_test (layer F.Cu) (tedit 5CF31DEF)
-
-                    (at 0 0 0)
-
-                    (fp_line (start 5 5) (end 6 6) (layer Dwgs.User) (width 0.05))
-(fp_line (start 5 5) (end 7 5) (layer Dwgs.User) (width 0.05))
-
-
-                )
-
-
-
-
-                (module anchor_test (layer F.Cu) (tedit 5CF31DEF)
-
-                    (at 0 0 0)
-
-                    (fp_line (start 0 0) (end 0 0) (layer Dwgs.User) (width 0.05))
-
-                )
-
-
-
-
-                (module arrobj_test (layer F.Cu) (tedit 5CF31DEF)
-
-                    (at 0 0 0)
-
-                    (fp_line (start 5 5) (end 6 6) (layer Dwgs.User) (width 0.05))
-(fp_line (start 5 5) (end 7 7) (layer Dwgs.User) (width 0.05))
-
-
-                )
-
-
-
+            
+ 
 
                 (module arrobj_test (layer F.Cu) (tedit 5CF31DEF)
 
@@ -298,7 +244,7 @@
 
                 )
 
-
+            
             (gr_line (start -9.5 9.5) (end 9.5 9.5) (layer "Edge.Cuts") (width 0.15))
 (gr_line (start 9.5 9.5) (end 9.5 -9.5) (layer "Edge.Cuts") (width 0.15))
 (gr_line (start 9.5 -9.5) (end -9.5 -9.5) (layer "Edge.Cuts") (width 0.15))
@@ -307,5 +253,7 @@
 (gr_line (start 29.5 9.5) (end 29.5 -9.5) (layer "Edge.Cuts") (width 0.15))
 (gr_line (start 29.5 -9.5) (end 10.5 -9.5) (layer "Edge.Cuts") (width 0.15))
 (gr_line (start 10.5 -9.5) (end 10.5 9.5) (layer "Edge.Cuts") (width 0.15))
-
+            
 )
+
+        

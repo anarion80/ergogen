@@ -2,15 +2,15 @@
             
 (kicad_pcb (version 20211014) (generator pcbnew)
 
-  (general
-    (thickness 1.6)
-  )
-
   (paper "A3")
   (title_block
     (title "pcb")
     (rev "v1.0.0")
     (company "Unknown")
+  )
+
+  (general
+    (thickness 1.6)
   )
 
   (layers
@@ -64,15 +64,13 @@
     (aux_axis_origin 0 0)
     (visible_elements FFFFFF7F)
     (pcbplotparams
-      (layerselection 0x00010fc_ffffffff)
-      (disableapertmacros false)
+      (layerselection 0x010fc_ffffffff)
       (usegerberextensions false)
       (usegerberattributes true)
       (usegerberadvancedattributes true)
       (creategerberjobfile true)
-      (svguseinch false)
-      (svgprecision 6)
       (excludeedgelayer true)
+      (linewidth 0.100000)
       (plotframeref false)
       (viasonmask false)
       (mode 1)
@@ -80,22 +78,18 @@
       (hpglpennumber 1)
       (hpglpenspeed 20)
       (hpglpendiameter 15.000000)
-      (dxfpolygonmode true)
-      (dxfimperialunits true)
-      (dxfusepcbnewfont true)
       (psnegative false)
       (psa4output false)
       (plotreference true)
       (plotvalue true)
       (plotinvisibletext false)
-      (sketchpadsonfab false)
+      (padsonsilk false)
       (subtractmaskfromsilk false)
       (outputformat 1)
       (mirror false)
       (drillshape 1)
       (scaleselection 1)
-      (outputdirectory "")
-    )
+      (outputdirectory ""))
   )
 
             (net 0 "")
@@ -455,7 +449,8 @@
         
 
         
-      (module PG1350 (layer F.Cu) (tedit 5DD50112)
+      (footprint PG1350 (layer F.Cu) (tedit 5DD50112)
+      (attr through_hole)
       (at 250 0 0)
 
       
@@ -470,11 +465,11 @@
       (fp_line (start 7 6) (end 7 7) (layer Dwgs.User) (width 0.15))
       (fp_line (start 7 -7) (end 6 -7) (layer Dwgs.User) (width 0.15))
       (fp_line (start 6 7) (end 7 7) (layer Dwgs.User) (width 0.15))
-      (fp_line (start 7 -7) (end 7 -6) (layer Dwgs.User) (width 0.15))      
-      
+      (fp_line (start 7 -7) (end 7 -6) (layer Dwgs.User) (width 0.15))
+
       
       (pad "" np_thru_hole circle (at 0 0) (size 3.429 3.429) (drill 3.429) (layers *.Cu *.Mask))
-        
+
       
       (pad "" np_thru_hole circle (at 5.5 0) (size 1.7018 1.7018) (drill 1.7018) (layers *.Cu *.Mask))
       (pad "" np_thru_hole circle (at -5.5 0) (size 1.7018 1.7018) (drill 1.7018) (layers *.Cu *.Mask))
@@ -487,10 +482,22 @@
       (fp_line (start -9 8.5) (end -9 -8.5) (layer Dwgs.User) (width 0.15))
       
         
+    (fp_line (start 6.25 -5.75) (end 6.75 -5.25) (layer "B.SilkS") (width 0.12))
+    (fp_line (start 3.5 -5.75) (end 6.25 -5.75) (layer "B.SilkS") (width 0.12))
+    (fp_line (start 6.75 -2.25) (end 6.25 -1.75) (layer "B.SilkS") (width 0.12))
+    (fp_line (start 6.25 -1.75) (end 3.5 -1.75) (layer "B.SilkS") (width 0.12))
+    (fp_line (start -1.75 -7.5) (end -1.25 -8) (layer "B.SilkS") (width 0.12))
+    (fp_line (start 3.5 -1.75) (end 1.25 -4) (layer "B.SilkS") (width 0.12))
+    (fp_line (start 1.25 -4) (end -1.25 -4) (layer "B.SilkS") (width 0.12))
+    (fp_line (start 1.25 -8) (end 3.5 -5.75) (layer "B.SilkS") (width 0.12))
+    (fp_line (start -1.25 -8) (end 1.25 -8) (layer "B.SilkS") (width 0.12))
+    (fp_line (start -1.25 -4) (end -1.75 -4.5) (layer "B.SilkS") (width 0.12))
+    
+        
           
           (pad "" np_thru_hole circle (at 5 -3.75) (size 3 3) (drill 3) (layers *.Cu *.Mask))
           (pad "" np_thru_hole circle (at 0 -5.95) (size 3 3) (drill 3) (layers *.Cu *.Mask))
-      
+
           
           (pad 1 smd rect (at -3.275 -5.95 0) (size 2.6 2.6) (layers B.Cu B.Paste B.Mask)  (net 1 "from"))
           (pad 2 smd rect (at 8.275 -3.75 0) (size 2.6 2.6) (layers B.Cu B.Paste B.Mask)  (net 2 "to"))
@@ -499,10 +506,45 @@
           
           (pad "" np_thru_hole circle (at -5 -3.75) (size 3 3) (drill 3) (layers *.Cu *.Mask))
           (pad "" np_thru_hole circle (at 0 -5.95) (size 3 3) (drill 3) (layers *.Cu *.Mask))
-      
+
           
           (pad 1 smd rect (at 3.275 -5.95 0) (size 2.6 2.6) (layers F.Cu F.Paste F.Mask)  (net 1 "from"))
           (pad 2 smd rect (at -8.275 -3.75 0) (size 2.6 2.6) (layers F.Cu F.Paste F.Mask)  (net 2 "to"))
+        
+        
+    (fp_line (start 1.25 -8) (end -1.25 -8) (layer "F.SilkS") (width 0.12))
+    (fp_line (start -6.25 -5.75) (end -6.75 -5.25) (layer "F.SilkS") (width 0.12))
+    (fp_line (start 1.75 -7.5) (end 1.25 -8) (layer "F.SilkS") (width 0.12))
+    (fp_line (start -3.5 -1.75) (end -1.25 -4) (layer "F.SilkS") (width 0.12))
+    (fp_line (start 1.25 -4) (end 1.75 -4.5) (layer "F.SilkS") (width 0.12))
+    (fp_line (start -6.25 -1.75) (end -3.5 -1.75) (layer "F.SilkS") (width 0.12))
+    (fp_line (start -1.25 -4) (end 1.25 -4) (layer "F.SilkS") (width 0.12))
+    (fp_line (start -3.5 -5.75) (end -6.25 -5.75) (layer "F.SilkS") (width 0.12))
+    (fp_line (start -1.25 -8) (end -3.5 -5.75) (layer "F.SilkS") (width 0.12))
+    (fp_line (start -6.75 -2.25) (end -6.25 -1.75) (layer "F.SilkS") (width 0.12))
+    
+        
+          (model ${KICAD6_3RD_PARTY}/3dmodels/ergogen/PG1350-socket.STEP
+              (at (xyz -0.21 0.15 -0.07))
+              (scale (xyz 1 1 1))
+              (rotate (xyz -90 0 180))
+          )
+          
+
+        
+          (model ${KICAD6_3RD_PARTY}/3dmodels/ergogen/MBK_Keycap_-_1u.step
+              (at (xyz -9.999999999177334e-7 0 0.25))
+              (scale (xyz 1 1 1))
+              (rotate (xyz 0 0 0))
+          )
+          
+        (model ${KICAD6_3RD_PARTY}/3dmodels/ergogen/SW_Kailh_Choc_V1.stp
+              (at (xyz 0 0 0))
+              (scale (xyz 1 1 1))
+              (rotate (xyz 0 0 0))
+        )
+
+
         )
         
             

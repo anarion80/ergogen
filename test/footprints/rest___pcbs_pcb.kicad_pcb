@@ -2,15 +2,15 @@
             
 (kicad_pcb (version 20211014) (generator pcbnew)
 
-  (general
-    (thickness 1.6)
-  )
-
   (paper "A3")
   (title_block
     (title "pcb")
     (rev "v1.0.0")
     (company "Unknown")
+  )
+
+  (general
+    (thickness 1.6)
   )
 
   (layers
@@ -64,15 +64,13 @@
     (aux_axis_origin 0 0)
     (visible_elements FFFFFF7F)
     (pcbplotparams
-      (layerselection 0x00010fc_ffffffff)
-      (disableapertmacros false)
+      (layerselection 0x010fc_ffffffff)
       (usegerberextensions false)
       (usegerberattributes true)
       (usegerberadvancedattributes true)
       (creategerberjobfile true)
-      (svguseinch false)
-      (svgprecision 6)
       (excludeedgelayer true)
+      (linewidth 0.100000)
       (plotframeref false)
       (viasonmask false)
       (mode 1)
@@ -80,22 +78,18 @@
       (hpglpennumber 1)
       (hpglpenspeed 20)
       (hpglpendiameter 15.000000)
-      (dxfpolygonmode true)
-      (dxfimperialunits true)
-      (dxfusepcbnewfont true)
       (psnegative false)
       (psa4output false)
       (plotreference true)
       (plotvalue true)
       (plotinvisibletext false)
-      (sketchpadsonfab false)
+      (padsonsilk false)
       (subtractmaskfromsilk false)
       (outputformat 1)
       (mirror false)
       (drillshape 1)
       (scaleselection 1)
-      (outputdirectory "")
-    )
+      (outputdirectory ""))
   )
 
             (net 0 "")
@@ -208,19 +202,54 @@
 
     
 
-        (footprint "PCM12SMTR" (layer F.Cu) (tedit 5E1ADAC2)
+        (footprint "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm" (layer "F.Cu")
         (at 100 0 0)
+        (descr "SMD Solder Jumper, 1x1.5mm Triangular Pads, 0.3mm gap, open")
+        (tags "solder jumper open")
+        (attr exclude_from_pos_files exclude_from_bom)
 
         
+
         (fp_text reference "J1" (at 0 0) (layer F.SilkS) hide (effects (font (size 1.27 1.27) (thickness 0.15))))
         (fp_text value Jumper (at 0 -7.3) (layer F.Fab) (effects (font (size 1 1) (thickness 0.15))))
         (fp_text value Jumper (at 0 2 270) (layer F.SilkS) (effects (font (size 1 1) (thickness 0.15))  ))
 
         
-        (pad 1 smd rect (at -0.50038 0 0) (size 0.635 1.143) (layers F.Cu F.Paste F.Mask)
-        (clearance 0.1905) (net 1 "from"))
-        (pad 2 smd rect (at 0.50038 0 0) (size 0.635 1.143) (layers F.Cu F.Paste F.Mask)
-        (clearance 0.1905) (net 2 "to")))
+        (fp_line (start 1.4 1) (end -1.4 1) (layer "F.SilkS") (width 0.12))
+        (fp_line (start 1.4 -1) (end 1.4 1) (layer "F.SilkS") (width 0.12))
+        (fp_line (start -1.4 1) (end -1.4 -1) (layer "F.SilkS") (width 0.12))
+        (fp_line (start -1.4 -1) (end 1.4 -1) (layer "F.SilkS") (width 0.12))
+        (fp_line (start -1.65 -1.25) (end 1.65 -1.25) (layer "F.CrtYd") (width 0.05))
+        (fp_line (start 1.65 1.25) (end -1.65 1.25) (layer "F.CrtYd") (width 0.05))
+        (fp_line (start 1.65 1.25) (end 1.65 -1.25) (layer "F.CrtYd") (width 0.05))
+        (fp_line (start -1.65 -1.25) (end -1.65 1.25) (layer "F.CrtYd") (width 0.05))
+
+        (pad "1" smd custom (at -0.725 0 0) (size 0.3 0.3) (layers "F.Cu" "F.Mask")
+          (net 1 "from") (zone_connect 2)
+          (options (clearance outline) (anchor rect))
+          (primitives
+            (gr_poly (pts
+                (xy 1 0)
+                (xy 0.5 0.75)
+                (xy -0.5 0.75)
+                (xy -0.5 -0.75)
+                (xy 0.5 -0.75)
+              ) (width 0) (fill yes))
+          ))
+        (pad "2" smd custom (at 0.725 0 0) (size 0.3 0.3) (layers "F.Cu" "F.Mask")
+          (net 2 "to") (zone_connect 2)
+          (options (clearance outline) (anchor rect))
+          (primitives
+            (gr_poly (pts
+                (xy 0.5 0.75)
+                (xy -0.65 0.75)
+                (xy -0.15 0)
+                (xy -0.65 -0.75)
+                (xy 0.5 -0.75)
+              ) (width 0) (fill yes))
+          ))
+      )
+
     
 
         (module lib:OLED_headers (layer F.Cu) (tedit 5E1ADAC2)
@@ -445,57 +474,58 @@
     
 
         
-        (module RollerEncoder_Panasonic_EVQWGD001 (layer F.Cu) (tedit 6040A10C)
-        (at 50 -150 0)   
-        (fp_text reference REF** (at 0 0 0) (layer F.Fab) (effects (font (size 1 1) (thickness 0.15))))
-        (fp_text value RollerEncoder_Panasonic_EVQWGD001 (at -0.1 9 0) (layer F.Fab) (effects (font (size 1 1) (thickness 0.15))))
+        (module RollerEncoder_Panasonic_EVQWGD001 (layer "F.Cu") (tedit 6040A10C)
+        (at 50 -150 0)
+        (attr through_hole)
+        (fp_text reference REF** (at 0 0 0) (layer "F.Fab") (effects (font (size 1 1) (thickness 0.15))))
+        (fp_text value RollerEncoder_Panasonic_EVQWGD001 (at -0.1 9 0) (layer "F.Fab") (effects (font (size 1 1) (thickness 0.15))))
+
         
-        
-        (fp_line (start -8.4 -6.4) (end 8.4 -6.4) (layer Dwgs.User) (width 0.12))
-        (fp_line (start 8.4 -6.4) (end 8.4 7.4) (layer Dwgs.User) (width 0.12))
-        (fp_line (start 8.4 7.4) (end -8.4 7.4) (layer Dwgs.User) (width 0.12))
-        (fp_line (start -8.4 7.4) (end -8.4 -6.4) (layer Dwgs.User) (width 0.12))
+        (fp_line (start -8.4 -6.4) (end 8.4 -6.4) (layer "Dwgs.User") (width 0.12))
+        (fp_line (start 8.4 -6.4) (end 8.4 7.4) (layer "Dwgs.User") (width 0.12))
+        (fp_line (start 8.4 7.4) (end -8.4 7.4) (layer "Dwgs.User") (width 0.12))
+        (fp_line (start -8.4 7.4) (end -8.4 -6.4) (layer "Dwgs.User") (width 0.12))
       
         
-          
-          (fp_line (start 9.8 7.3) (end 9.8 -6.3) (layer Edge.Cuts) (width 0.15))
-          (fp_line (start 7.4 -6.3) (end 7.4 7.3) (layer Edge.Cuts) (width 0.15))
-          (fp_line (start 9.5 -6.6) (end 7.7 -6.6) (layer Edge.Cuts) (width 0.15))
-          (fp_line (start 7.7 7.6) (end 9.5 7.6) (layer Edge.Cuts) (width 0.15))
-          (fp_arc (start 7.7 7.3) (end 7.4 7.3) (angle -90) (layer Edge.Cuts) (width 0.15))
-          (fp_arc (start 9.5 7.3) (end 9.5 7.6) (angle -90) (layer Edge.Cuts) (width 0.15))
-          (fp_arc (start 7.7 -6.3) (end 7.7 -6.6) (angle -90) (layer Edge.Cuts) (width 0.15))
-          (fp_arc (start 9.5 -6.3) (end 9.8 -6.3) (angle -90) (layer Edge.Cuts) (width 0.15))
+         
+         (fp_line (start 9.8 7.3) (end 9.8 -6.3) (layer "Edge.Cuts") (width 0.15))
+         (fp_line (start 7.4 -6.3) (end 7.4 7.3) (layer "Edge.Cuts") (width 0.15))
+         (fp_line (start 9.5 -6.6) (end 7.7 -6.6) (layer "Edge.Cuts") (width 0.15))
+         (fp_line (start 7.7 7.6) (end 9.5 7.6) (layer "Edge.Cuts") (width 0.15))
+         (fp_arc (start 9.8 7.3) (mid 9.712132 7.512132) (end 9.5 7.6) (layer "Edge.Cuts") (width 0.15))
+         (fp_arc (start 7.7 7.6) (mid 7.487868 7.512132) (end 7.4 7.3) (layer "Edge.Cuts") (width 0.15))
+         (fp_arc (start 9.5 -6.6) (mid 9.712132 -6.512132) (end 9.8 -6.3) (layer "Edge.Cuts") (width 0.15))
+         (fp_arc (start 7.4 -6.3) (mid 7.487868 -6.512132) (end 7.7 -6.6) (layer "Edge.Cuts") (width 0.15))
 
+         (fp_line (start -9.8 7.3) (end -9.8 -6.3) (layer "Edge.Cuts") (width 0.15))
+         (fp_line (start -7.4 -6.3) (end -7.4 7.3) (layer "Edge.Cuts") (width 0.15))
+         (fp_line (start -9.5 -6.6) (end -7.7 -6.6) (layer "Edge.Cuts") (width 0.15))
+         (fp_line (start -7.7 7.6) (end -9.5 7.6) (layer "Edge.Cuts") (width 0.15))
+         (fp_arc (start -9.5 7.6) (mid -9.712132 7.512132) (end -9.8 7.3) (layer "Edge.Cuts") (width 0.15))
+         (fp_arc (start -7.4 7.3) (mid -7.487868 7.512132) (end -7.7 7.6) (layer "Edge.Cuts") (width 0.15))
+         (fp_arc (start -9.8 -6.3) (mid -9.712132 -6.512132) (end -9.5 -6.6) (layer "Edge.Cuts") (width 0.15))
+         (fp_arc (start -7.7 -6.6) (mid -7.487868 -6.512132) (end -7.4 -6.3) (layer "Edge.Cuts") (width 0.15))
+        
+        
           
-          (pad S1 thru_hole circle (at -6.85 -6.2 0) (size 1.6 1.6) (drill 0.9) (layers *.Cu *.Mask) (net 1 "from"))
-          (pad S2 thru_hole circle (at -5 -6.2 0) (size 1.6 1.6) (drill 0.9) (layers *.Cu *.Mask) (net 2 "to"))
-          (pad A thru_hole circle (at -5.625 -3.81 0) (size 1.6 1.6) (drill 0.9) (layers *.Cu *.Mask) (net 11 "A"))
-          (pad B thru_hole circle (at -5.625 -1.27 0) (size 1.6 1.6) (drill 0.9) (layers *.Cu *.Mask) (net 12 "B"))
-          (pad C thru_hole circle (at -5.625 1.27 0) (size 1.6 1.6) (drill 0.9) (layers *.Cu *.Mask) (net 13 "C"))
-          (pad D thru_hole circle (at -5.625 3.81 0) (size 1.6 1.6) (drill 0.9) (layers *.Cu *.Mask) (net 14 "D"))
+          (pad "S1" thru_hole circle (at -6.85 -6.2 0) (size 1.6 1.6) (drill 0.9) (layers *.Cu *.Mask) (net 1 "from"))
+          (pad "S2" thru_hole circle (at -5 -6.2 0) (size 1.6 1.6) (drill 0.9) (layers *.Cu *.Mask) (net 2 "to"))
+          (pad "A" thru_hole circle (at -5.625 -3.81 0) (size 1.6 1.6) (drill 0.9) (layers *.Cu *.Mask) (net 11 "A"))
+          (pad "B" thru_hole circle (at -5.625 -1.27 0) (size 1.6 1.6) (drill 0.9) (layers *.Cu *.Mask) (net 12 "B"))
+          (pad "C" thru_hole circle (at -5.625 1.27 0) (size 1.6 1.6) (drill 0.9) (layers *.Cu *.Mask) (net 13 "C"))
+          (pad "D" thru_hole circle (at -5.625 3.81 0) (size 1.6 1.6) (drill 0.9) (layers *.Cu *.Mask) (net 14 "D"))
 
           
           (pad "" np_thru_hole circle (at -5.625 6.3 0) (size 1.5 1.5) (drill 1.5) (layers *.Cu *.Mask))
         
         
           
-          (fp_line (start -9.8 7.3) (end -9.8 -6.3) (layer Edge.Cuts) (width 0.15))
-          (fp_line (start -7.4 -6.3) (end -7.4 7.3) (layer Edge.Cuts) (width 0.15))
-          (fp_line (start -9.5 -6.6) (end -7.7 -6.6) (layer Edge.Cuts) (width 0.15))
-          (fp_line (start -7.7 7.6) (end -9.5 7.6) (layer Edge.Cuts) (width 0.15))
-          (fp_arc (start -7.7 7.3) (end -7.4 7.3) (angle 90) (layer Edge.Cuts) (width 0.15))
-          (fp_arc (start -9.5 7.3) (end -9.5 7.6) (angle 90) (layer Edge.Cuts) (width 0.15))
-          (fp_arc (start -7.7 -6.3) (end -7.7 -6.6) (angle 90) (layer Edge.Cuts) (width 0.15))
-          (fp_arc (start -9.5 -6.3) (end -9.8 -6.3) (angle 90) (layer Edge.Cuts) (width 0.15))
-
-          
-          (pad S1 thru_hole circle (at 6.85 -6.2 0) (size 1.6 1.6) (drill 0.9) (layers *.Cu *.Mask) (net 1 "from"))
-          (pad S2 thru_hole circle (at 5 -6.2 0) (size 1.6 1.6) (drill 0.9) (layers *.Cu *.Mask) (net 2 "to"))
-          (pad A thru_hole circle (at 5.625 -3.81 0) (size 1.6 1.6) (drill 0.9) (layers *.Cu *.Mask) (net 11 "A"))
-          (pad B thru_hole circle (at 5.625 -1.27 0) (size 1.6 1.6) (drill 0.9) (layers *.Cu *.Mask) (net 12 "B"))
-          (pad C thru_hole circle (at 5.625 1.27 0) (size 1.6 1.6) (drill 0.9) (layers *.Cu *.Mask) (net 13 "C"))
-          (pad D thru_hole circle (at 5.625 3.81 0) (size 1.6 1.6) (drill 0.9) (layers *.Cu *.Mask) (net 14 "D"))
+          (pad "S1" thru_hole circle (at 6.85 -6.2 0) (size 1.6 1.6) (drill 0.9) (layers *.Cu *.Mask) (net 1 "from"))
+          (pad "S2" thru_hole circle (at 5 -6.2 0) (size 1.6 1.6) (drill 0.9) (layers *.Cu *.Mask) (net 2 "to"))
+          (pad "A" thru_hole circle (at 5.625 -3.81 0) (size 1.6 1.6) (drill 0.9) (layers *.Cu *.Mask) (net 11 "A"))
+          (pad "B" thru_hole circle (at 5.625 -1.27 0) (size 1.6 1.6) (drill 0.9) (layers *.Cu *.Mask) (net 12 "B"))
+          (pad "C" thru_hole circle (at 5.625 1.27 0) (size 1.6 1.6) (drill 0.9) (layers *.Cu *.Mask) (net 13 "C"))
+          (pad "D" thru_hole circle (at 5.625 3.81 0) (size 1.6 1.6) (drill 0.9) (layers *.Cu *.Mask) (net 14 "D"))
 
           
           (pad "" np_thru_hole circle (at 5.625 6.3 0) (size 1.5 1.5) (drill 1.5) (layers *.Cu *.Mask))

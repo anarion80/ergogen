@@ -16,6 +16,7 @@ pcbs.pcb.footprints:
     params:
       from: from
       to: to
+      side: F
     adjust.shift: [100, 0]
 
   - what: oled

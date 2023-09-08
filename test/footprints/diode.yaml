@@ -2,5 +2,6 @@ points.zones.matrix:
 pcbs.pcb.footprints:
   - what: diode
     params:
+      reverse: true
       from: from
       to: to

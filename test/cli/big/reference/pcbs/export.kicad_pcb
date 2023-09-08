@@ -1,8 +1,8 @@
 
+            
+(kicad_pcb (version 20211014) (generator pcbnew)
 
-(kicad_pcb (version 20171130) (generator pcbnew)
-
-  (page "A3")
+  (paper "A3")
   (title_block
     (title "export")
     (rev "v3.14")
@@ -64,15 +64,13 @@
     (aux_axis_origin 0 0)
     (visible_elements FFFFFF7F)
     (pcbplotparams
-      (layerselection 0x00010fc_ffffffff)
-      (disableapertmacros false)
+      (layerselection 0x010fc_ffffffff)
       (usegerberextensions false)
       (usegerberattributes true)
       (usegerberadvancedattributes true)
       (creategerberjobfile true)
-      (svguseinch false)
-      (svgprecision 6)
       (excludeedgelayer true)
+      (linewidth 0.100000)
       (plotframeref false)
       (viasonmask false)
       (mode 1)
@@ -80,26 +78,22 @@
       (hpglpennumber 1)
       (hpglpenspeed 20)
       (hpglpendiameter 15.000000)
-      (dxfpolygonmode true)
-      (dxfimperialunits true)
-      (dxfusepcbnewfont true)
       (psnegative false)
       (psa4output false)
       (plotreference true)
       (plotvalue true)
       (plotinvisibletext false)
-      (sketchpadsonfab false)
+      (padsonsilk false)
       (subtractmaskfromsilk false)
       (outputformat 1)
       (mirror false)
       (drillshape 1)
       (scaleselection 1)
-      (outputdirectory "")
-    )
+      (outputdirectory ""))
   )
 
             (net 0 "")
-
+            
   (net_class Default "This is the default net class."
     (clearance 0.2)
     (trace_width 0.25)
@@ -110,7 +104,7 @@
     (add_net "")
   )
 
-
+            
   (net_class Power "This is the power net class."
     (clearance 0.2)
     (trace_width 0.5)
@@ -118,10 +112,12 @@
     (via_drill 0.4)
     (uvia_dia 0.3)
     (uvia_drill 0.1)
-
+    
   )
 
-
-
-
+            
+            
+            
 )
+
+        
