@@ -1,5 +1,7 @@
 points.zones.matrix:
   mirror: 10
+  key:
+    magic_value: 5
 outlines:
   edge:
     - what: rectangle
@@ -18,6 +20,7 @@ pcbs:
           shift: [1, 1]
           rotate: 30
         params:
+          width: u/40
           side: F
           mirror:
             side: B
@@ -28,9 +31,25 @@ pcbs:
           rotate: 30
       dyn:
         what: dynamic_net_test
-      anc:
+      anc1:
         what: anchor_test
         params:
           end:
             ref: matrix
             shift: [10, 10]
+      anc2:
+        what: anchor_test
+        params:
+          end: matrix
+      arrobj:
+        what: arrobj_test
+        params:
+          start: {x: 5, y: 5}
+          end: [[6, 6], [7, 7]]
+      arrobj_templated:
+        what: arrobj_test
+        where:
+          ref: matrix
+        params:
+          start: '{x: {{magic_value}}, y: {{magic_value}}}'
+          end: '[[6, 6], [7, {{magic_value}}]]'

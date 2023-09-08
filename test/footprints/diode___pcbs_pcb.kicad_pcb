@@ -2,15 +2,15 @@
             
 (kicad_pcb (version 20211014) (generator pcbnew)
 
-  (general
-    (thickness 1.6)
-  )
-
   (paper "A3")
   (title_block
     (title "pcb")
     (rev "v1.0.0")
     (company "Unknown")
+  )
+
+  (general
+    (thickness 1.6)
   )
 
   (layers
@@ -64,15 +64,13 @@
     (aux_axis_origin 0 0)
     (visible_elements FFFFFF7F)
     (pcbplotparams
-      (layerselection 0x00010fc_ffffffff)
-      (disableapertmacros false)
+      (layerselection 0x010fc_ffffffff)
       (usegerberextensions false)
       (usegerberattributes true)
       (usegerberadvancedattributes true)
       (creategerberjobfile true)
-      (svguseinch false)
-      (svgprecision 6)
       (excludeedgelayer true)
+      (linewidth 0.100000)
       (plotframeref false)
       (viasonmask false)
       (mode 1)
@@ -80,22 +78,18 @@
       (hpglpennumber 1)
       (hpglpenspeed 20)
       (hpglpendiameter 15.000000)
-      (dxfpolygonmode true)
-      (dxfimperialunits true)
-      (dxfusepcbnewfont true)
       (psnegative false)
       (psa4output false)
       (plotreference true)
       (plotvalue true)
       (plotinvisibletext false)
-      (sketchpadsonfab false)
+      (padsonsilk false)
       (subtractmaskfromsilk false)
       (outputformat 1)
       (mirror false)
       (drillshape 1)
       (scaleselection 1)
-      (outputdirectory "")
-    )
+      (outputdirectory ""))
   )
 
             (net 0 "")
@@ -127,12 +121,13 @@
 
             
             
-            (footprint "Diode_SMD:D_SOD-123" (layer "F.Cu")
+            (footprint "Diode_SMD:SOD-123" (layer "F.Cu")
 
 
             (at 0 0 0)
             (descr "SOD-123")
             (tags "SOD-123")
+            (property "LCSC Part #" "C105503" )
             (attr smd)
 
             
@@ -160,7 +155,44 @@
             (fp_line (start -1.4 0.9) (end -1.4 -0.9) (layer "F.Fab") (width 0.1))
             (fp_line (start 0.25 0.4) (end -0.35 0) (layer "F.Fab") (width 0.1))
             (fp_line (start -1.4 -0.9) (end 1.4 -0.9) (layer "F.Fab") (width 0.1))
+
+            (fp_line (start 0.25 0) (end 0.75 0) (layer "F.SilkS") (width 0.1))
+            (fp_line (start -0.75 0) (end -0.35 0) (layer "F.SilkS") (width 0.1))
+            (fp_line (start -0.35 0) (end 0.25 -0.4) (layer "F.SilkS") (width 0.1))
+            (fp_line (start -0.35 0) (end -0.35 -0.55) (layer "F.SilkS") (width 0.1))
+            (fp_line (start 0.25 0.4) (end -0.35 0) (layer "F.SilkS") (width 0.1))
+            (fp_line (start -0.35 0) (end -0.35 0.55) (layer "F.SilkS") (width 0.1))
+            (fp_line (start 0.25 -0.4) (end 0.25 0.4) (layer "F.SilkS") (width 0.1))
             
+            
+            
+            (fp_line (start -2.25 1) (end 1.65 1) (layer "B.SilkS") (width 0.12))
+            (fp_line (start -2.25 -1) (end -2.25 1) (layer "B.SilkS") (width 0.12))
+            (fp_line (start -2.25 -1) (end 1.65 -1) (layer "B.SilkS") (width 0.12))
+            (fp_line (start -2.35 -1.15) (end 2.35 -1.15) (layer "B.CrtYd") (width 0.05))
+            (fp_line (start 2.35 1.15) (end -2.35 1.15) (layer "B.CrtYd") (width 0.05))
+            (fp_line (start -2.35 -1.15) (end -2.35 1.15) (layer "B.CrtYd") (width 0.05))
+            (fp_line (start 2.35 -1.15) (end 2.35 1.15) (layer "B.CrtYd") (width 0.05))
+            (fp_line (start 0.25 0.4) (end -0.35 0) (layer "B.Fab") (width 0.1))
+            (fp_line (start -0.35 0) (end 0.25 -0.4) (layer "B.Fab") (width 0.1))
+            (fp_line (start 1.4 -0.9) (end 1.4 0.9) (layer "B.Fab") (width 0.1))
+            (fp_line (start 0.25 0) (end 0.75 0) (layer "B.Fab") (width 0.1))
+            (fp_line (start -0.35 0) (end -0.35 -0.55) (layer "B.Fab") (width 0.1))
+            (fp_line (start -0.75 0) (end -0.35 0) (layer "B.Fab") (width 0.1))
+            (fp_line (start 1.4 0.9) (end -1.4 0.9) (layer "B.Fab") (width 0.1))
+            (fp_line (start 0.25 -0.4) (end 0.25 0.4) (layer "B.Fab") (width 0.1))
+            (fp_line (start -1.4 0.9) (end -1.4 -0.9) (layer "B.Fab") (width 0.1))
+            (fp_line (start -1.4 -0.9) (end 1.4 -0.9) (layer "B.Fab") (width 0.1))
+            (fp_line (start -0.35 0) (end -0.35 0.55) (layer "B.Fab") (width 0.1))
+
+            (fp_line (start -0.35 0) (end -0.35 -0.55) (layer "B.SilkS") (width 0.1))
+            (fp_line (start -0.35 0) (end -0.35 0.55) (layer "B.SilkS") (width 0.1))
+            (fp_line (start 0.25 0.4) (end -0.35 0) (layer "B.SilkS") (width 0.1))
+            (fp_line (start -0.75 0) (end -0.35 0) (layer "B.SilkS") (width 0.1))
+            (fp_line (start 0.25 0) (end 0.75 0) (layer "B.SilkS") (width 0.1))
+            (fp_line (start 0.25 -0.4) (end 0.25 0.4) (layer "B.SilkS") (width 0.1))
+            (fp_line (start -0.35 0) (end 0.25 -0.4) (layer "B.SilkS") (width 0.1))
+
             
             
                 
