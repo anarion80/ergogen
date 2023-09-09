@@ -97,7 +97,7 @@ module.exports = {
     }
 
     const model = `
-        (model "\${KICAD6_3RD_PARTY}/3dmodels/ergogen/PJ320A.STEP"
+        (model "\${KICAD7_3RD_PARTY}/3dmodels/ergogen/PJ320A.STEP"
                 (offset (xyz -0.25 -5.2 -12))
                 (scale (xyz 1 1 1))
                 (rotate (xyz 0 0 90))

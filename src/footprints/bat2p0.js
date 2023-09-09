@@ -66,7 +66,7 @@ module.exports = {
             ${layout(p.front, 'F')}
             ${layout(p.back, 'B')}
 
-            (model "\${KICAD6_3RD_PARTY}/3dmodels/ergogen/S2B-PH-K-S.step"
+            (model "\${KICAD7_3RD_PARTY}/3dmodels/ergogen/S2B-PH-K-S.step"
               (offset (xyz 0 -1 0))
               (scale (xyz 1 1 1))
               (rotate (xyz 0 0 270))

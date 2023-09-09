@@ -64,15 +64,16 @@
     (aux_axis_origin 0 0)
     (visible_elements FFFFFF7F)
     (pcbplotparams
-      (layerselection 0x010fc_ffffffff)
+      (layerselection 0x00010fc_ffffffff)
+      (plot_on_all_layers_selection 0x0000000_00000000)
       (disableapertmacros false)
       (usegerberextensions false)
       (usegerberattributes true)
       (usegerberadvancedattributes true)
       (creategerberjobfile true)
-      (svguseinch false)
+      (dashed_line_dash_ratio 12.000000)
+      (dashed_line_gap_ratio 3.000000)
       (svgprecision 6)
-      (excludeedgelayer true)
       (plotframeref false)
       (viasonmask false)
       (mode 1)
@@ -94,7 +95,8 @@
       (mirror false)
       (drillshape 1)
       (scaleselection 1)
-      (outputdirectory ""))
+      (outputdirectory "")
+    )
   )
 
             (net 0 "")
@@ -163,7 +165,7 @@
         
 
         
-        (model ${KICAD6_3RD_PARTY}/3dmodels/ergogen/SW_Kailh_Choc_V1.stp
+        (model ${KICAD7_3RD_PARTY}/3dmodels/ergogen/SW_Kailh_Choc_V1.stp
               (at (xyz 0 0 0))
               (scale (xyz 1 1 1))
               (rotate (xyz 0 0 0))
@@ -217,13 +219,13 @@
         
 
         
-          (model ${KICAD6_3RD_PARTY}/3dmodels/ergogen/MBK_Keycap_-_1u.step
+          (model ${KICAD7_3RD_PARTY}/3dmodels/ergogen/MBK_Keycap_-_1u.step
               (at (xyz -9.999999999177334e-7 0 0.25))
               (scale (xyz 1 1 1))
               (rotate (xyz 0 0 0))
           )
           
-        (model ${KICAD6_3RD_PARTY}/3dmodels/ergogen/SW_Kailh_Choc_V1.stp
+        (model ${KICAD7_3RD_PARTY}/3dmodels/ergogen/SW_Kailh_Choc_V1.stp
               (at (xyz 0 0 0))
               (scale (xyz 1 1 1))
               (rotate (xyz 0 0 0))
@@ -286,7 +288,7 @@
         
 
         
-        (model ${KICAD6_3RD_PARTY}/3dmodels/ergogen/SW_Kailh_Choc_V1.stp
+        (model ${KICAD7_3RD_PARTY}/3dmodels/ergogen/SW_Kailh_Choc_V1.stp
               (at (xyz 0 0 0))
               (scale (xyz 1 1 1))
               (rotate (xyz 0 0 0))
@@ -347,7 +349,7 @@
         
         
         
-          (model ${KICAD6_3RD_PARTY}/3dmodels/ergogen/PG1350-socket.STEP
+          (model ${KICAD7_3RD_PARTY}/3dmodels/ergogen/PG1350-socket.STEP
               (at (xyz -0.21 0.15 -0.07))
               (scale (xyz 1 1 1))
               (rotate (xyz -90 0 180))
@@ -355,7 +357,7 @@
           
 
         
-        (model ${KICAD6_3RD_PARTY}/3dmodels/ergogen/SW_Kailh_Choc_V1.stp
+        (model ${KICAD7_3RD_PARTY}/3dmodels/ergogen/SW_Kailh_Choc_V1.stp
               (at (xyz 0 0 0))
               (scale (xyz 1 1 1))
               (rotate (xyz 0 0 0))
@@ -435,7 +437,7 @@
     (fp_line (start -6.75 -2.25) (end -6.25 -1.75) (layer "F.SilkS") (width 0.12))
     
         
-          (model ${KICAD6_3RD_PARTY}/3dmodels/ergogen/PG1350-socket.STEP
+          (model ${KICAD7_3RD_PARTY}/3dmodels/ergogen/PG1350-socket.STEP
               (at (xyz -0.21 0.15 -0.07))
               (scale (xyz 1 1 1))
               (rotate (xyz -90 0 180))
@@ -443,7 +445,7 @@
           
 
         
-        (model ${KICAD6_3RD_PARTY}/3dmodels/ergogen/SW_Kailh_Choc_V1.stp
+        (model ${KICAD7_3RD_PARTY}/3dmodels/ergogen/SW_Kailh_Choc_V1.stp
               (at (xyz 0 0 0))
               (scale (xyz 1 1 1))
               (rotate (xyz 0 0 0))
@@ -529,7 +531,7 @@
     (fp_line (start -6.75 -2.25) (end -6.25 -1.75) (layer "F.SilkS") (width 0.12))
     
         
-          (model ${KICAD6_3RD_PARTY}/3dmodels/ergogen/PG1350-socket.STEP
+          (model ${KICAD7_3RD_PARTY}/3dmodels/ergogen/PG1350-socket.STEP
               (at (xyz -0.21 0.15 -0.07))
               (scale (xyz 1 1 1))
               (rotate (xyz -90 0 180))
@@ -537,13 +539,13 @@
           
 
         
-          (model ${KICAD6_3RD_PARTY}/3dmodels/ergogen/MBK_Keycap_-_1u.step
+          (model ${KICAD7_3RD_PARTY}/3dmodels/ergogen/MBK_Keycap_-_1u.step
               (at (xyz -9.999999999177334e-7 0 0.25))
               (scale (xyz 1 1 1))
               (rotate (xyz 0 0 0))
           )
           
-        (model ${KICAD6_3RD_PARTY}/3dmodels/ergogen/SW_Kailh_Choc_V1.stp
+        (model ${KICAD7_3RD_PARTY}/3dmodels/ergogen/SW_Kailh_Choc_V1.stp
               (at (xyz 0 0 0))
               (scale (xyz 1 1 1))
               (rotate (xyz 0 0 0))

@@ -64,15 +64,16 @@
     (aux_axis_origin 0 0)
     (visible_elements FFFFFF7F)
     (pcbplotparams
-      (layerselection 0x010fc_ffffffff)
+      (layerselection 0x00010fc_ffffffff)
+      (plot_on_all_layers_selection 0x0000000_00000000)
       (disableapertmacros false)
       (usegerberextensions false)
       (usegerberattributes true)
       (usegerberadvancedattributes true)
       (creategerberjobfile true)
-      (svguseinch false)
+      (dashed_line_dash_ratio 12.000000)
+      (dashed_line_gap_ratio 3.000000)
       (svgprecision 6)
-      (excludeedgelayer true)
       (plotframeref false)
       (viasonmask false)
       (mode 1)
@@ -94,7 +95,8 @@
       (mirror false)
       (drillshape 1)
       (scaleselection 1)
-      (outputdirectory ""))
+      (outputdirectory "")
+    )
   )
 
             (net 0 "")
@@ -167,7 +169,7 @@
             (pad "" np_thru_hole circle (at 0 8.6 270) (size 1.2 1.2) (drill 1.2) (layers *.Cu *.Mask))
         
             
-        (model "${KICAD6_3RD_PARTY}/3dmodels/ergogen/PJ320A.STEP"
+        (model "${KICAD7_3RD_PARTY}/3dmodels/ergogen/PJ320A.STEP"
                 (offset (xyz -0.25 -5.2 -12))
                 (scale (xyz 1 1 1))
                 (rotate (xyz 0 0 90))
@@ -264,7 +266,7 @@
             (pad "" np_thru_hole circle (at 0 8.6 270) (size 1.2 1.2) (drill 1.2) (layers *.Cu *.Mask))
         
             
-        (model "${KICAD6_3RD_PARTY}/3dmodels/ergogen/PJ320A.STEP"
+        (model "${KICAD7_3RD_PARTY}/3dmodels/ergogen/PJ320A.STEP"
                 (offset (xyz -0.25 -5.2 -12))
                 (scale (xyz 1 1 1))
                 (rotate (xyz 0 0 90))

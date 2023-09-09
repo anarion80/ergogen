@@ -21,10 +21,10 @@ module.exports = {
     from: undefined,
     to: undefined,
     keycap_size: 1, // 1U, 1.5U, 2U
-    model: '${KICAD6_3RD_PARTY}/3dmodels/ergogen/SW_Kailh_Choc_V1.stp',
-    hotswap_model: '${KICAD6_3RD_PARTY}/3dmodels/ergogen/PG1350-socket.STEP',
-    //hotswap_model: '${KICAD6_3RD_PARTY}/3dmodels/com_github_perigoso_keyswitch-kicad-library/3d-library.3dshapes/SW_Hotswap_Kailh_Choc_v1.stp',
-    keycap_model: '${KICAD6_3RD_PARTY}/3dmodels/ergogen/MBK_Keycap_-_1u.step',
+    model: '${KICAD7_3RD_PARTY}/3dmodels/ergogen/SW_Kailh_Choc_V1.stp',
+    hotswap_model: '${KICAD7_3RD_PARTY}/3dmodels/ergogen/PG1350-socket.STEP',
+    //hotswap_model: '${KICAD7_3RD_PARTY}/3dmodels/com_github_perigoso_keyswitch-kicad-library/3d-library.3dshapes/SW_Hotswap_Kailh_Choc_v1.stp',
+    keycap_model: '${KICAD7_3RD_PARTY}/3dmodels/ergogen/MBK_Keycap_-_1u.step',
   },
   body: p => {
 

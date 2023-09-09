@@ -1653,7 +1653,7 @@ module.exports = {
         (gr_line (start 0.762 -0.762) (end 0.762 -3.302) (width 0.25))
         (gr_line (start 0.762 -3.302) (end 0 -4.064) (width 0.25))
       ))
-      (model "\${KICAD6_3RD_PARTY}/3dmodels/ergogen/ARDUINO PRO MICRO.STEP"
+      (model "\${KICAD7_3RD_PARTY}/3dmodels/ergogen/ARDUINO PRO MICRO.STEP"
               (offset (xyz -14 -7.8 4.5))
               (scale (xyz 1 1 1))
               (rotate (xyz 270 0 0))
