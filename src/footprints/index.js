@@ -5,6 +5,7 @@ module.exports = {
     chocmini: require('./chocmini'),
     diode: require('./diode'),
     jstph: require('./jstph'),
+    jstphx4: require('./jstphx4'),
     jumper: require('./jumper'),
     mx: require('./mx'),
     oled: require('./oled'),
@@ -15,6 +16,7 @@ module.exports = {
     rgb: require('./rgb'),
     rotary: require('./rotary'),
     scrollwheel: require('./scrollwheel'),
+    scrollwheel_mirrored: require('./scrollwheel_mirrored'),
     slider: require('./slider'),
     trrs: require('./trrs'),
     via: require('./via'),
@@ -38,5 +40,7 @@ module.exports = {
     tpmodule: require('./TPModule'),
     tpsensormodule: require('./TPSensorModule'),
     tpsensormodule_connector: require('./TPSensorModule_Connector'),
-    xiao: require('./xiao')
+    xiao: require('./xiao'),
+    niceview: require('./niceview'),
+    oled_reversible: require('./oled-reversible')
 }

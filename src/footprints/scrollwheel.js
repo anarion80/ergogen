@@ -81,6 +81,14 @@ module.exports = {
         `
       }
 
+      const model = `
+        (model "\${KICAD7_3RD_PARTY}/3dmodels/ergogen/Encoder.step"
+            (offset (xyz 8.5 -7 -3.5))
+            (scale (xyz 1 1 1))
+            (rotate (xyz 0 0 -90))
+        )
+        `
+
       function pins(def_neg, def_pos) {
         return `
           ${'' /* pins */}
@@ -98,6 +106,7 @@ module.exports = {
     if(p.reverse) {
       return `
         ${standard}
+        ${model}
         ${edge_cuts(p.reverse)}
         ${pins('-', '')}
         ${pins('', '-')})
@@ -105,6 +114,7 @@ module.exports = {
     } else {
       return `
         ${standard}
+        ${model}
         ${edge_cuts(p.reverse)}
         ${pins('-', '')})
         `
