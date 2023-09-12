@@ -34,22 +34,22 @@ module.exports = {
     body: p => {
         const standard = `
         (module RollerEncoder_Panasonic_EVQWGD001 (layer "F.Cu") (tedit 6040A10C)
-        ${p.at /* parametric position */}   
+        ${p.at /* parametric position */}
         (fp_text reference REF** (at 0 0 ${p.rot}) (layer "F.Fab") (effects (font (size 1 1) (thickness 0.15))))
         (fp_text value RollerEncoder_Panasonic_EVQWGD001 (at -0.1 9 ${p.rot}) (layer "F.Fab") (effects (font (size 1 1) (thickness 0.15))))
-        
+
         ${'' /* corner marks */}
-        (fp_line (start -8.4 -6.4) (end 8.4 -6.4) (layer "F.SilkS") (stroke (width 0.12) (type solid)))
-        (fp_line (start 8.4 -6.4) (end 8.4 7.4) (layer "F.SilkS") (stroke (width 0.12) (type solid)))
-        (fp_line (start 8.4 7.4) (end -8.4 7.4) (layer "F.SilkS") (stroke (width 0.12) (type solid)))
-        (fp_line (start -8.4 7.4) (end -8.4 -6.4) (layer "F.SilkS") (stroke (width 0.12) (type solid)))
+        (fp_line (start -8.4 -6.4) (end 8.4 -6.4) (layer "F.SilkS") (width 0.12))
+        (fp_line (start 8.4 -6.4) (end 8.4 7.4) (layer "F.SilkS") (width 0.12))
+        (fp_line (start 8.4 7.4) (end -8.4 7.4) (layer "F.SilkS") (width 0.12))
+        (fp_line (start -8.4 7.4) (end -8.4 -6.4) (layer "F.SilkS") (width 0.12))
 
-        (fp_line (start -8.4 6.4) (end 8.4 6.4) (layer "B.SilkS") (stroke (width 0.12) (type solid)))
-        (fp_line (start 8.4 6.4) (end 8.4 -7.4) (layer "B.SilkS") (stroke (width 0.12) (type solid)))
-        (fp_line (start 8.4 -7.4) (end -8.4 -7.4) (layer "B.SilkS") (stroke (width 0.12) (type solid)))
-        (fp_line (start -8.4 -7.4) (end -8.4 6.4) (layer "B.SilkS") (stroke (width 0.12) (type solid)))
+        (fp_line (start -8.4 6.4) (end 8.4 6.4) (layer "B.SilkS") (width 0.12))
+        (fp_line (start 8.4 6.4) (end 8.4 -7.4) (layer "B.SilkS") (width 0.12))
+        (fp_line (start 8.4 -7.4) (end -8.4 -7.4) (layer "B.SilkS") (width 0.12))
+        (fp_line (start -8.4 -7.4) (end -8.4 6.4) (layer "B.SilkS") (width 0.12))
 
-        (fp_text user "Scrollwheel" (at 0 0 ${p.rot + 90}) (layer "F.SilkS" knockout) (effects (font (size 1.0 1.0) (thickness 0.15))))
+        (fp_text user "Scrollwheel" (at 0 0 ${p.rot + 90}) (layer "F.SilkS") (effects (font (size 1.0 1.0) (thickness 0.15))))
         (fp_text user "EVQWGD001" (at 1.75 0 ${p.rot + 90}) (layer "F.SilkS") (effects (font (size 1.0 1.0) (thickness 0.15))))
 
       `
@@ -64,15 +64,15 @@ module.exports = {
         function pins(def_neg, def_pos) {
             return `
           ${'' /* edge cuts */}
-          (fp_line (start ${def_pos}9.8 7.3) (end ${def_pos}9.8 -7.3) (layer "Edge.Cuts") (stroke (width 0.15) (type solid)))
-          (fp_line (start ${def_pos}7.4 -7.3) (end ${def_pos}7.4 7.3) (layer "Edge.Cuts") (stroke (width 0.15) (type solid)))
-          (fp_line (start ${def_pos}9.5 -7.6) (end ${def_pos}7.7 -7.6) (layer "Edge.Cuts") (stroke (width 0.15) (type solid)))
-          (fp_line (start ${def_pos}7.7 7.6) (end ${def_pos}9.5 7.6) (layer "Edge.Cuts") (stroke (width 0.15) (type solid)))
+          (fp_line (start ${def_pos}9.8 7.3) (end ${def_pos}9.8 -7.3) (layer "Edge.Cuts") (width 0.15))
+          (fp_line (start ${def_pos}7.4 -7.3) (end ${def_pos}7.4 7.3) (layer "Edge.Cuts") (width 0.15))
+          (fp_line (start ${def_pos}9.5 -7.6) (end ${def_pos}7.7 -7.6) (layer "Edge.Cuts") (width 0.15))
+          (fp_line (start ${def_pos}7.7 7.6) (end ${def_pos}9.5 7.6) (layer "Edge.Cuts") (width 0.15))
 
-          (fp_arc (start ${def_pos}7.4 -7.3) (mid ${def_pos}7.487868 -7.512132) (end ${def_pos}7.7 -7.6) (stroke (width 0.15) (type solid)) (layer "Edge.Cuts"))
-          (fp_arc (start ${def_pos}7.7 7.6) (mid ${def_pos}7.487868 7.512132) (end ${def_pos}7.4 7.3) (stroke (width 0.15) (type solid)) (layer "Edge.Cuts"))
-          (fp_arc (start ${def_pos}9.5 -7.6) (mid ${def_pos}9.712132 -7.512132) (end ${def_pos}9.8 -7.3) (stroke (width 0.15) (type solid)) (layer "Edge.Cuts"))
-          (fp_arc (start ${def_pos}9.8 7.3) (mid ${def_pos}9.712132 7.512132) (end ${def_pos}9.5 7.6) (stroke (width 0.15) (type solid)) (layer "Edge.Cuts"))
+          (fp_arc (start ${def_pos}7.4 -7.3) (mid ${def_pos}7.487868 -7.512132) (end ${def_pos}7.7 -7.6) (width 0.15) (layer "Edge.Cuts"))
+          (fp_arc (start ${def_pos}7.7 7.6) (mid ${def_pos}7.487868 7.512132) (end ${def_pos}7.4 7.3) (width 0.15) (layer "Edge.Cuts"))
+          (fp_arc (start ${def_pos}9.5 -7.6) (mid ${def_pos}9.712132 -7.512132) (end ${def_pos}9.8 -7.3) (width 0.15) (layer "Edge.Cuts"))
+          (fp_arc (start ${def_pos}9.8 7.3) (mid ${def_pos}9.712132 7.512132) (end ${def_pos}9.5 7.6) (width 0.15) (layer "Edge.Cuts"))
 
           ${'' /* pins */}
           (pad S1 thru_hole circle (at ${def_neg}6.85 -6.2 ${p.rot}) (size 1.6 1.6) (drill 0.9) (layers "*.Cu" "*.Mask") ${p.from.str})
@@ -82,7 +82,7 @@ module.exports = {
           (pad C thru_hole circle (at ${def_neg}5.625 1.27 ${p.rot}) (size 1.6 1.6) (drill 0.9) (layers "*.Cu" "*.Mask") ${p.C.str})
           (pad D thru_hole circle (at ${def_neg}5.625 3.81 ${p.rot}) (size 1.6 1.6) (drill 0.9) (layers "*.Cu" "*.Mask") ${p.D.str})
 
-          ${'' /* mirror pins */}  
+          ${'' /* mirror pins */}
           (pad S1 thru_hole circle (at ${def_neg}6.85 6.2 ${p.rot}) (size 1.6 1.6) (drill 0.9) (layers "*.Cu" "*.Mask") ${p.from.str})
           (pad S2 thru_hole circle (at ${def_neg}5 6.2 ${p.rot}) (size 1.6 1.6) (drill 0.9) (layers "*.Cu" "*.Mask") ${p.to.str})
         `
