@@ -48,8 +48,8 @@ module.exports = {
 	    function pins(def_neg, def_pos, def_side) {
 		return `
 			${''/* pins */}
-			(pad 1 smd rect (at ${def_neg}1.7 0) (size 0.9 1.7) (layers ${def_side}.Cu ${def_side}.Paste ${def_side}.Mask) ${p.r1.str})
-			(pad 2 smd rect (at ${def_pos}1.7 0) (size 0.9 1.7) (layers ${def_side}.Cu ${def_side}.Paste ${def_side}.Mask) ${p.r2.str})
+			(pad ${def_pos === '-' ? "2" : "1"} smd rect (at ${def_neg}1.7 0) (size 0.9 1.7) (layers ${def_side}.Cu ${def_side}.Paste ${def_side}.Mask) ${def_pos === '-' ? p.r2.str : p.r1.str })
+			(pad ${def_pos === '-' ? "1" : "2"} smd rect (at ${def_pos}1.7 0) (size 0.9 1.7) (layers ${def_side}.Cu ${def_side}.Paste ${def_side}.Mask) ${def_pos === '-' ? p.r1.str : p.r2.str })
 		`
 	    }
 
