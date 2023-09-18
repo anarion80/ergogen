@@ -2,6 +2,7 @@
 
 module.exports = {
     params: {
+        designator: 'BAT',
         class: 'PAD',
         width: 1.2,
         height: 1.75,

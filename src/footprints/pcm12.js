@@ -1,5 +1,6 @@
 module.exports = {
   params: {
+    designator: 'SW',
     class: 'T',
     reverse: false,
     from: undefined,

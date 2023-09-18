@@ -1,5 +1,6 @@
 module.exports = {
     params: {
+		designator: 'RST',
         class: 'S',
 		reverse: true,
 		r1: {type: 'net', value: 'r1'},

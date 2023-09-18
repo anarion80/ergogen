@@ -115,7 +115,7 @@ module.exports = {
                 (pad 2 thru_hole rect (at -3.81 0 ${ p.rot }) (size 1.778 1.778) (drill 0.9906) (layers *.Cu *.Mask) ${ p.to.str })
                 `
             }
-            (model "\${KICAD6_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-123.wrl"
+            (model "\${KICAD7_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-123.wrl"
                 (offset (xyz 0 0 0))
                 (scale (xyz 1 1 1))
                 (rotate (xyz 0 0 0))

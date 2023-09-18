@@ -1,5 +1,6 @@
 module.exports = {
   params: {
+    designator: 'H',
     size: 4.4,
     drill: 2.2,
   },
@@ -16,6 +17,3 @@ module.exports = {
     `
   }
 }
-
-
-

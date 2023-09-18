@@ -1,5 +1,6 @@
 module.exports = {
     params: {
+        designator: 'TP',
         reverseSilks: false,
         centerHole: false,
         northHole: true,
