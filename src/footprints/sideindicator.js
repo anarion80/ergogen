@@ -80,7 +80,7 @@ module.exports = {
         (xy -0.009434 -1.818585)
       )
 
-      (stroke (width 0.2) (type solid)) (fill solid) (layer "${p.side}.Cu"))
+      (width 0.2) (layer "${p.side}.Cu"))
     (fp_poly
       (pts
         (xy 0.001023 -1.814417)
@@ -146,7 +146,7 @@ module.exports = {
         (xy -0.009434 -1.818585)
       )
 
-      (stroke (width 0.2) (type solid)) (fill solid) (layer "${p.side}.Mask"))
+      (width 0.2) (layer "${p.side}.Mask"))
         )
         `
         } else {
@@ -193,7 +193,7 @@ module.exports = {
         (xy 0.050406 -0.665549)
       )
 
-      (stroke (width 0.02) (type solid)) (fill solid) (layer "${p.side}.Cu"))
+      (width 0.02) (layer "${p.side}.Cu"))
     (fp_poly
       (pts
         (xy 0.816212 -1.420314)
@@ -314,7 +314,7 @@ module.exports = {
         (xy -0.004889 -1.894469)
       )
 
-      (stroke (width 0.02) (type solid)) (fill solid) (layer "${p.side}.Cu"))
+      (width 0.02) (layer "${p.side}.Cu"))
     (fp_poly
       (pts
         (xy 0.138714 -0.665139)
@@ -347,7 +347,7 @@ module.exports = {
         (xy 0.050406 -0.665549)
       )
 
-      (stroke (width 0.02) (type solid)) (fill solid) (layer "${p.side}.Mask"))
+      (width 0.02) (layer "${p.side}.Mask"))
     (fp_poly
       (pts
         (xy 0.816212 -1.420314)
@@ -468,7 +468,7 @@ module.exports = {
         (xy -0.004889 -1.894469)
       )
 
-      (stroke (width 0.02) (type solid)) (fill solid) (layer "${p.side}.Mask"))
+      (width 0.02) (layer "${p.side}.Mask"))
         )
         `
         }
