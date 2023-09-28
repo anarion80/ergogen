@@ -17,7 +17,7 @@ module.exports = {
         ${'' /* footprint reference */}
 
         (fp_text reference "${p.ref}" (at 0 0) (layer ${p.side}.SilkS) ${p.ref_hide} ${p.ref_hide} (effects (font (size 1.27 1.27) (thickness 0.15))))
-        (fp_text value Jumper (at 0 -7.3) (layer ${p.side}.Fab) (effects (font (size 1 1) (thickness 0.15))))
+        (fp_text value Jumper (at 0 -2.5) (layer ${p.side}.Fab) (effects (font (size 1 1) (thickness 0.15))))
 
         ${'' /* pins */}
         (fp_line (start 1.4 1) (end -1.4 1) (layer "${p.side}.SilkS") (width 0.12))
